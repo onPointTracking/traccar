@@ -1,16 +1,10 @@
 import React from 'react'
- 
+import Header from "./Header";
 
-class App extends React.Component {
-    render() {
-        return (
-            <>
-                <div style={{justifyContent : "center",display : "flex",flex : 1,alignItems:"center"}}>
-                    <h1>Hello World</h1>
-                </div>
-            </>
-        )
-    }
+function App() {
+	return (
+		<Header />
+	)
 }
 
-export default App;
+export default App
