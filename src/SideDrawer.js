@@ -3,6 +3,7 @@ import { useState } from "react"
 import { IconButton,Drawer,List,ListItem,ListItemText } from "@material-ui/core"
 import { Menu } from "@material-ui/icons"
 import { makeStyles } from "@material-ui/core/styles"
+import  {Link} from "react-router-dom"
 
 const useStyles = makeStyles({
 	list: {
@@ -11,8 +12,13 @@ const useStyles = makeStyles({
 	linkText: {
 	  textDecoration: `none`,
 	  textTransform: `uppercase`,
-	  color: `black`,
+	  fontWeight:"bold",
+	  
 	},
+	link:{
+		textDecoration:"none",
+		color: "black",
+	}
   })
   
 
@@ -36,24 +42,42 @@ const SideDrawer = () => {
 		  onKeyDown={toggleDrawer(anchor, false)}
 		>
 		  <List component="nav">
+			  <Link to="/groups" className={classes.link}>
+			  
 				<ListItem button>
-				  <ListItemText primary="Groups" />
+				  <ListItemText className={classes.linkText} primary="Groups" />
 				</ListItem>
+			  </Link>
+			  <Link to="/customers" className={classes.link}>
+
 				<ListItem button>
-				  <ListItemText primary="Customers" />
+				  <ListItemText className={classes.linkText} primary="Customers" />
 				</ListItem>
+			  </Link>
+			  <Link to="/devices" className={classes.link}>
+
 				<ListItem button>
-				  <ListItemText primary="Devices" />
+				  <ListItemText className={classes.linkText} primary="Devices" />
 				</ListItem>
+			  </Link>
+			  <Link to="/alerts" className={classes.link}>
+
 				<ListItem button>
-				  <ListItemText primary="Alerts" />
+				  <ListItemText className={classes.linkText} primary="Alerts" />
 				</ListItem>
+			  </Link>
+			  <Link to="/geofences" className={classes.linkText} className={classes.link}>
+
 				<ListItem button>
 				  <ListItemText primary="Geofences" />
 				</ListItem>
+			  </Link>
+			  <Link to="/statistics" className={classes.linkText} className={classes.link}>
+
 				<ListItem button>
-				  <ListItemText primary="Statistics" />
+				  <ListItemText className={classes.linkText} primary="Statistics" />
 				</ListItem>
+			  </Link>
 		  </List>
 		</div>
 	  );
