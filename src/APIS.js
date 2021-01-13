@@ -23,7 +23,6 @@ export const COMMANDS = '/commands';
 
 // Attributes
 export const ATTRIBUTES_COMPUTED = '/attributes/computed';
-export const ATTRIBUTES_COMPUTED = '/attributes/computed';
 
 export const DRIVERS = '/drivers';
 export const MAINTENANCE = '/maintenance';

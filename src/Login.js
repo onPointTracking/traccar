@@ -1,5 +1,8 @@
 import React from 'react'
 import "./Login.css"
+import axios from './Connector'
+import {SESSION} from './APIS'
+import qs from 'qs'
 
 
 const signUpBtn = () => {
@@ -11,22 +14,43 @@ const signInBtn = () => {
 }
 
  const Login = () => {
+
+   const [email,setEmail] = React.useState(""); 
+   const [password,setPassword] = React.useState(""); 
+
+   const handleLogin = (event) => {
+    event.preventDefault();
+    const token = Buffer.from(`${email}:${password}`, 'utf8').toString('base64')
+    axios.post(SESSION ,
+      "email=" + email +  "&password=" + password
+     , {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded' ,
+      }
+    }).then(response => {
+      console.log(response)
+    })
+   }
 	return (
 		<div className="container">
       <div className="forms-container">
         <div className="signin-signup">
-          <form className="sign-in-form">
+          <form className="sign-in-form" onSubmit={handleLogin}>
 			  <img src="https://i.ibb.co/hfNRxRg/logo.png" className="logo" alt="Logo"/>
             <h2 className="title">Sign in</h2>
             <div className="input-field">
               <i className="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Email" value={email} onChange={(e) => {
+                setEmail(e.target.value)
+              }} />
             </div>
             <div className="input-field">
               <i className="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" value={password} onChange={(e) => {
+                setPassword(e.target.value)
+              }} />
             </div>
-            <input type="submit" value="Login" className="btn solid" />
+            <input type="submit" value="Login" className="btn solid"  />
 		  
 		  </form>
           <form className="sign-up-form">
@@ -44,7 +68,7 @@ const signInBtn = () => {
               <i className="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <input type="submit" className="btn" value="Sign up" />
+            <input type="submit" className="btn" value="Sign up"  />
           </form>
         </div>
       </div>
