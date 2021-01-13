@@ -10,6 +10,7 @@ import Groups from './Screens/Groups';
 import Geofences from './Screens/Geofences';
 import Alerts from './Screens/Alerts';
 import Statistics from './Screens/Statistics';
+import Login from './Login';
 
 
 <Header />
@@ -23,6 +24,7 @@ function App() {
                 <Route exact path="/geofences" component={Geofences}/>
                 <Route exact path="/alerts" component={Alerts}/>
                 <Route exact path="/statistics" component={Statistics}/>
+                <Route exact path="/login" component={Login}/>
             </Switch>
 
 	)

@@ -10,8 +10,8 @@ const useStyles = makeStyles({
 	  width: 250,
 	},
 	linkText: {
-	  textDecoration: `none`,
-	  textTransform: `uppercase`,
+	  textDecoration: "none",
+	  textTransform: "uppercase",
 	  fontWeight:"bold",
 	  
 	},
@@ -75,7 +75,7 @@ const SideDrawer = () => {
 			  <Link to="/statistics" className={classes.link}>
 
 				<ListItem button>
-				  <ListItemText className={classes.linkText}  className={classes.linkText} primary="Statistics" />
+				  <ListItemText className={classes.linkText} primary="Statistics" />
 				</ListItem>
 			  </Link>
 		  </List>
