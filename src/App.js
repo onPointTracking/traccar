@@ -8,6 +8,8 @@ import Customers from './Screens/Customers';
 import Devices from './Screens/Devices';
 import Groups from './Screens/Groups';
 import Geofences from './Screens/Geofences';
+import Alerts from './Screens/Alerts';
+import Statistics from './Screens/Statistics';
 
 
 <Header />
@@ -19,8 +21,8 @@ function App() {
                 <Route exact path="/devices" component={Devices}/>
                 <Route exact path="/groups" component={Groups}/>
                 <Route exact path="/geofences" component={Geofences}/>
-                <Route exact path="/alerts" component={Geofences}/>
-                <Route exact path="/statistics" component={Geofences}/>
+                <Route exact path="/alerts" component={Alerts}/>
+                <Route exact path="/statistics" component={Statistics}/>
             </Switch>
 
 	)
