@@ -13,6 +13,7 @@ const useStyles = makeStyles({
 	  textDecoration: "none",
 	  textTransform: "uppercase",
 	  fontWeight:"bold",
+	  padding:"15px 0",
 	  
 	},
 	link:{
