@@ -70,7 +70,7 @@ const SideDrawer = () => {
 			  <Link to="/geofences" className={classes.link}>
 
 				<ListItem button>
-				  <ListItemText primary="Geofences" />
+				  <ListItemText className={classes.linkText} primary="Geofences" />
 				</ListItem>
 			  </Link>
 			  <Link to="/statistics" className={classes.link}>

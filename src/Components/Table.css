@@ -1,11 +1,10 @@
 @media (min-width: 990px) {
-    .tableGrid {
+    .MuiDataGrid-root.MuiDataGrid-root.tableGrid {
         overflow: hidden;
-    }
-    .tableContainer {
-        width: 90%;
+        width: 950px !important;
     }
 }
+
 .MuiDataGrid-row.Mui-even {
     background-color: #0000001c;
 }
