@@ -27,13 +27,13 @@ const useStyles = makeStyles((theme) => ({
 const flex = {
 	"width": "60%",
 	"display":"flex",
-	"justify-content":"center",
-	"flex-direction":"row",
+	"justifyContent":"center",
+	"flexDirection":"row",
 }
 const toolbarStyle = {
     "width": "100%",
     "display": "flex",
-	"justify-content": "space-between",
+	"justifyContent": "space-between",
 }
 
 export default function ButtonAppBar() {
@@ -41,7 +41,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" sty>
+      <AppBar position="static">
         <Toolbar style={toolbarStyle}>
 		<Hidden mdUp>
 		<SideDrawer />

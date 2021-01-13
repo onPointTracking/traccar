@@ -1,15 +1,10 @@
-import React from 'react'
-import Header from '../Header'
+import React from 'react';
+import Header from '../Header';
 
-
-class Groups extends React.Component {
-    render() {
-        return(
-            <>
-                <Header/>
-            </>
-        )
-    }
+const  Groups = ()=> {
+	return (
+		<Header />
+	)
 }
 
-export default Groups;
+export default Groups

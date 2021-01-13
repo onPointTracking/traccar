@@ -19,6 +19,8 @@ function App() {
                 <Route exact path="/devices" component={Devices}/>
                 <Route exact path="/groups" component={Groups}/>
                 <Route exact path="/geofences" component={Geofences}/>
+                <Route exact path="/alerts" component={Geofences}/>
+                <Route exact path="/statistics" component={Geofences}/>
             </Switch>
 
 	)

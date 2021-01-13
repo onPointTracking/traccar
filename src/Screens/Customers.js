@@ -1,14 +1,10 @@
-import React from 'react'
-import Header from '../Header'
+import React from 'react';
+import Header from '../Header';
 
-
-
-class Customers extends React.Component {
-    render() {
-        return(
-            <Header/>
-        )
-    }
+const  Customers = ()=> {
+	return (
+		<Header />
+	)
 }
 
-export default Customers;
+export default Customers
